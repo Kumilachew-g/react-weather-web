@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import { Link } from "react-router-dom";
-require("dotenv").config();
+// require("dotenv").config();
 
 function Weather() {
   const [weatherData, setWeatherData] = useState([{}]);
   const [city, setCity] = useState("");
   const [unit, setUnit] = useState(true);
 
-  let json = require("./recents.json");
+  // let json = require("./recents.json");
 
   const dateBuilder = (d) => {
     let months = [
@@ -55,7 +55,7 @@ function Weather() {
 
           // This conditional will add the location to the json array if it exists
           if (data.cod !== "404" && data.main !== "undefined") {
-            let newData = json["recents"].push({ city: data.name });
+            // let newData = json["recents"].push({ city: data.name });
           }
         });
     }
